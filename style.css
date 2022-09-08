@@ -1,9 +1,14 @@
 .canvas{
+    margin: 50px;
+    height: 600px;
+    width: auto;
     border: 5px solid;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .pixel-grid{
+    display: flex;
     height: 100px;
     width: 100px;
     border: 1px solid;
