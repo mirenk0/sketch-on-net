@@ -1,8 +1,8 @@
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
+    --background-color: 1;
 }
-
 
 .canvas{
     height: 50vh;
@@ -15,8 +15,27 @@
     grid-template-rows: repeat(var(--grid-rows), 1fr);
 }
 
+@keyframes hover {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: var(--background-color);
+    }
+}
+
 .pixel-grid{
-    color: grey;
     border: 1px solid;
+    animation-name: hover;
+    animation-duration: 1ms;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+}
+
+.pixel-grid:hover,
+.pixel-grid:focus,
+.pixel-grid:active {
+    animation-fill-mode: forwards;
+    animation-play-state: running;
 }
 
