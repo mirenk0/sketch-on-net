@@ -1,16 +1,22 @@
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+
 .canvas{
-    margin: 50px;
-    height: 600px;
-    width: auto;
+    height: 50vh;
+    width: 50vh;
+    margin: 10rem;
+    background-color: rgb(82, 89, 95);
     border: 5px solid;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols),1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
 }
 
 .pixel-grid{
-    display: flex;
-    height: 100px;
-    width: 100px;
+    color: grey;
     border: 1px solid;
 }
 
