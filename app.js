@@ -11,18 +11,18 @@ let pixel = document.createElement("div");
 
 // //Clear canvas/reset state
 // function clear(){
-//     // let divClasses = document.querySelectorAll(".pixel-grid");
+//     let divClasses = document.querySelectorAll(".pixel-grid");
   
-//     // divClasses.forEach(div => {
-//     //     div.classList.remove(".pixel-grid")
-//     // });
+//     divClasses.forEach(div => {
+//         div.classList.remove(".pixel-grid")
+//     });
 
 // }
 
 //Getting slider range value and resetting state
 function changePixels(val){
     // clear();
-    // canvas.removeChild(pixel).className = "pixel-grid";
+    canvas.replaceChildren();
     numberOfPixels = val;
     resolution = Math.pow(numberOfPixels, 2);
     document.querySelector(".pixelOutput").textContent = val;
