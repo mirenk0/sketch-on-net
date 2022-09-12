@@ -12,9 +12,16 @@
     <div class="canvas">
     </div>
 
+    <div id="inputs">
+    <input type="color" class="colorpicker" oninput="changeColor(this.value)" value="#0000ff">
+    <br>
+    <br>
+
     <input class="slider" type="range" min="16" max="112" step="16"  value="16"
     oninput="changePixels(this.value)">
     <p class="pixelOutput">16</p>
+
+    </div>  
 
 </body>
 </html>

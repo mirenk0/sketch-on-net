@@ -9,24 +9,19 @@ let rainBowColor = "#" + Math.floor(Math.random()*16777215).toString(16);
 const root = document.documentElement;
 let pixel = document.createElement("div");
 
-// //Clear canvas/reset state
-// function clear(){
-//     let divClasses = document.querySelectorAll(".pixel-grid");
-  
-//     divClasses.forEach(div => {
-//         div.classList.remove(".pixel-grid")
-//     });
-
-// }
 
 //Getting slider range value and resetting state
 function changePixels(val){
-    // clear();
     canvas.replaceChildren();
     numberOfPixels = val;
     resolution = Math.pow(numberOfPixels, 2);
     document.querySelector(".pixelOutput").textContent = val;
     createPixels(resolution);
+}
+
+
+function changeColor(col){
+    root.style.setProperty("--background-paint", col); 
 }
 
 //Create a grid
@@ -42,7 +37,6 @@ function createPixels(number) {
  
     root.style.setProperty("--background-paint", rainBowColor); 
 }
-
 
 createPixels(resolution);
 

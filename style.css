@@ -9,13 +9,18 @@
     height: 50vh;
     width: 50vh;
     margin: 10rem;
-    background-color: var(--background-paint);
     border: 5px solid;
     display: grid;
     grid-template-columns: repeat(var(--grid-cols),1fr);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
 }
 
+#inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 @keyframes hover {
     0% {
@@ -28,6 +33,7 @@
 
 .pixel-grid{
     /* border: 1px solid; */
+    background-color: var(--background-paint);
     animation-name: hover;
     animation-duration: 1ms;
     animation-fill-mode: backwards;
